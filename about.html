@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Jisha Prime Orthopaedic & Spine Care</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            background: linear-gradient(rgba(0, 74, 173, 0.9), rgba(0, 74, 173, 0.9)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .breadcrumb a {
+            color: var(--primary-gold);
+        }
+
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            border-radius: 15px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .experience-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background-color: var(--accent-orange);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .experience-badge span {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .doctor-profile {
+            background-color: var(--off-white);
+            padding: 4rem 0;
+        }
+
+        .profile-card {
+            display: flex;
+            gap: 4rem;
+            align-items: flex-start;
+        }
+
+        .profile-img {
+            flex: 0 0 400px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            min-height: 500px;
+            background-color: var(--off-white);
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-content .designation {
+            color: var(--accent-orange);
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        @media (max-width: 992px) {
+            .about-section, .profile-card {
+                grid-template-columns: 1fr;
+                flex-direction: column;
+            }
+            .profile-img {
+                flex: 0 0 auto;
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+        
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                                                                                                                                <!-- Original Logo Image -->
+                <img src="assets/logo.png" alt="Jisha Prime Orthopaedic & Spine Care Logo" style="height: 70px; width: auto;">
+                <div class="logo-text">
+                    <h1>Jisha Prime</h1>
+                    <p>Orthopaedic & Spine Care</p>
+                </div>
+            </a>
+            
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="https://www.bookmydoctorr.com/doctor-details/prajwal-narayan-144" target="_blank" class="btn btn-secondary" style="color: white; border: none;">Book Appointment</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>About Our Clinic</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>About Us</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="section">
+        <div class="container">
+            <div class="about-section">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Clinic Interior">
+                    <div class="experience-badge">
+                        <span>15+</span>
+                        Years of Excellence
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h4 style="color: var(--accent-orange); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">Our Mission</h4>
+                    <h2 style="margin-bottom: 1.5rem;">Dedicated to Your Spinal Health and Mobility</h2>
+                    <p>Jisha Prime Orthopaedic & Spine Care was founded with a single vision: to provide the highest quality orthopaedic care in a patient-centered environment. Located in the heart of Mysore, we serve as a beacon of hope for those suffering from chronic pain and mobility issues.</p>
+                    <p>Our facility is designed to offer a seamless journey from diagnosis to recovery. We believe that every patient deserves a life free from pain, and our team works tirelessly to achieve that through advanced surgical techniques and compassionate rehabilitation.</p>
+                    <ul style="margin-top: 1.5rem;">
+                        <li style="margin-bottom: 0.8rem; display: flex; gap: 1rem; align-items: center;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-gold);"></i>
+                            <span>State-of-the-art diagnostic imaging</span>
+                        </li>
+                        <li style="margin-bottom: 0.8rem; display: flex; gap: 1rem; align-items: center;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-gold);"></i>
+                            <span>Minimally invasive surgical suites</span>
+                        </li>
+                        <li style="margin-bottom: 0.8rem; display: flex; gap: 1rem; align-items: center;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-gold);"></i>
+                            <span>Dedicated post-operative care units</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Profile -->
+    <section class="doctor-profile">
+        <div class="container">
+            <div class="profile-card">
+                <div class="profile-img">
+                    <img src="assets/dr_prajwal.png" alt="Dr. Prajwal Narayan">
+                </div>
+                <div class="profile-content">
+                    <h4 style="color: var(--accent-orange); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">Lead Specialist</h4>
+                    <h2>Dr. Prajwal Narayan</h2>
+                    <span class="designation">MS (Ortho), Fellow in Spine Surgery</span>
+                    <p>Dr. Prajwal Narayan is a highly skilled Orthopaedic and Spine Surgeon with over 15 years of experience in managing complex spinal disorders. He completed his graduation and post-graduation from prestigious institutions and underwent specialized fellowship training in advanced spine surgery.</p>
+                    <p>Known for his precision and patient-first approach, Dr. Narayan has successfully performed thousands of surgeries, ranging from simple fracture fixations to complex spinal reconstructions. He is a pioneer in minimally invasive spine surgery in the Mysore region, helping patients recover faster with minimal discomfort.</p>
+                    
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <h3>5000+</h3>
+                            <p>Successful Surgeries</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>10k+</h3>
+                            <p>Happy Patients</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>15+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo-text" style="margin-bottom: 1rem;">
+                        <h1 style="color: var(--white);">Jisha Prime</h1>
+                        <p style="color: var(--primary-gold);">Orthopaedic & Spine Care</p>
+                    </div>
+                    <p>Dedicated to providing the highest standard of orthopaedic and spine care in Mysore, ensuring our patients return to their lives as quickly and safely as possible.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/search/top?q=Jisha%20Prime%20Orthopaedic%20%26%20Spine%20Care" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/thespinemechanic07" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919187050960" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="https://www.bookmydoctorr.com/doctor-details/prajwal-narayan-144" target="_blank">Book Appointment</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#spine">Spine Surgery</a></li>
+                        <li><a href="services.html#joint">Joint Replacement</a></li>
+                        <li><a href="services.html#trauma">Trauma & Fracture Care</a></li>
+                        <li><a href="services.html#sports">Sports Medicine</a></li>
+                        <li><a href="services.html#physio">Physiotherapy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Punya Square, Sayyaji Rao Road,<br>Mysore, Karnataka 570001</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 91870 50960</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>jishaprimeorthocare@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Jisha Prime Orthopaedic & Spine Care. All Rights Reserved. Designed for Excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

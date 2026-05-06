@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jisha Prime Orthopaedic & Spine Care | Mysore</title>
+    <meta name="description" content="Jisha Prime Orthopaedic & Spine Care in Mysore, led by Dr. Prajwal Narayan. Expert orthopaedic and advanced spine treatments. Your Spine, In Safe Hands.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Home Specific Styles */
+        .hero {
+            background: linear-gradient(rgba(0, 31, 77, 0.75), rgba(0, 74, 173, 0.85)), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: var(--white);
+            padding: 10rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+        
+        .hero-btns {
+            display: flex;
+            gap: 1.2rem;
+            justify-content: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: -4rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            transition: transform var(--transition-normal);
+            border-bottom: 4px solid var(--primary-gold);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--accent-orange);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 1rem;
+        }
+
+        /* About Section Preview */
+        .about-preview {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .about-preview-img {
+            flex: 1;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            position: relative;
+            min-height: 400px;
+            background-color: var(--off-white);
+        }
+
+        .about-preview-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .about-preview-img::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 10px solid var(--primary-gold);
+            border-radius: 20px;
+            pointer-events: none;
+        }
+
+        .about-preview-content {
+            flex: 1;
+        }
+
+        .about-preview-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-preview-content p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .doctor-signature {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            font-style: italic;
+            margin-top: 2rem;
+        }
+
+        /* Services Preview */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+        }
+
+        .service-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+        }
+
+        .service-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .service-content {
+            padding: 1.5rem;
+        }
+
+        .service-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-content p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .service-link {
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 50%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            color: var(--white);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1rem; }
+            .about-preview { flex-direction: column; }
+            .hero-btns { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+        
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <!-- Original Logo Image -->
+                <img src="assets/logo.png" alt="Jisha Prime Orthopaedic & Spine Care Logo" style="height: 70px; width: auto;">
+                <div class="logo-text">
+                    <h1>Jisha Prime</h1>
+                    <p>Orthopaedic & Spine Care</p>
+                </div>
+            </a>
+            
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="https://www.bookmydoctorr.com/doctor-details/prajwal-narayan-144" target="_blank" class="btn btn-secondary" style="color: white; border: none;">Book Appointment</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Your Spine, In Safe Hands</h1>
+            <p>Advanced orthopaedic and spine treatments led by Dr. Prajwal Narayan in Mysore. We combine cutting-edge technology with compassionate care to restore your mobility and quality of life.</p>
+            <div class="hero-btns">
+                <a href="https://www.bookmydoctorr.com/doctor-details/prajwal-narayan-144" target="_blank" class="btn btn-secondary">Book an Appointment</a>
+                <a href="services.html" class="btn btn-outline" style="color: white; border-color: white;">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <div class="container">
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-user-md feature-icon"></i>
+                <h3>Expert Specialists</h3>
+                <p>Led by Dr. Prajwal Narayan, our team brings years of specialized experience in complex orthopaedic cases.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-x-ray feature-icon"></i>
+                <h3>Advanced Technology</h3>
+                <p>Equipped with state-of-the-art diagnostic and surgical equipment for precise and effective treatments.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-heartbeat feature-icon"></i>
+                <h3>Compassionate Care</h3>
+                <p>Patient-centric approach ensuring comfort, clear communication, and personalized recovery plans.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Preview Section -->
+    <section class="section">
+        <div class="container about-preview">
+            <div class="about-preview-img">
+                <img src="assets/dr_prajwal.png" alt="Dr. Prajwal Narayan">
+            </div>
+            <div class="about-preview-content">
+                <h4 style="color: var(--accent-orange); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">About Our Clinic</h4>
+                <h2>Excellence in Orthopaedic & Spine Surgery</h2>
+                <p>At Jisha Prime Orthopaedic & Spine Care, we are dedicated to providing world-class medical services to the community of Mysore and beyond. Our holistic approach ensures that every patient receives a tailored treatment plan, from conservative management to advanced surgical interventions.</p>
+                <p>Dr. Prajwal Narayan is renowned for his expertise in minimally invasive spine surgeries, joint replacements, and complex trauma management, committed to returning patients to their lifestyles.</p>
+                <div class="doctor-signature">Dr. Prajwal Narayan</div>
+                <a href="about.html" class="btn btn-outline" style="margin-top: 1.5rem;">Read Full Profile</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview Section -->
+    <section class="section section-bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h4 style="color: var(--accent-orange); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">What We Offer</h4>
+                <h2 class="section-title">Our Specialized Services</h2>
+                <p class="section-subtitle">Comprehensive care for all your musculoskeletal and spinal health needs under one roof.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1559757175-5700dde675bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Spine Surgery</h3>
+                        <p>Advanced minimally invasive procedures for disc herniation, spinal stenosis, and deformities.</p>
+                        <a href="services.html#spine" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1579684453423-f84349ef60b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Joint Replacement</h3>
+                        <p>Total and partial knee and hip replacement surgeries using the latest implant technologies.</p>
+                        <a href="services.html#joint" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1530026405186-ed1f139313f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Trauma Care</h3>
+                        <p>Expert management of complex fractures, dislocations, and sports injuries.</p>
+                        <a href="services.html#trauma" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Physiotherapy</h3>
+                        <p>Comprehensive rehabilitation programs to speed up recovery and improve mobility.</p>
+                        <a href="services.html#physio" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="services.html" class="btn btn-primary">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container cta-content">
+            <h2>Ready to Take the First Step Towards a Pain-Free Life?</h2>
+            <p>Schedule your consultation with Dr. Prajwal Narayan today.</p>
+            <a href="https://www.bookmydoctorr.com/doctor-details/prajwal-narayan-144" target="_blank" class="btn btn-secondary btn-lg" style="padding: 1rem 2.5rem; font-size: 1.1rem;">Book Your Appointment Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo-text" style="margin-bottom: 1rem;">
+                        <h1 style="color: var(--white);">Jisha Prime</h1>
+                        <p style="color: var(--primary-gold);">Orthopaedic & Spine Care</p>
+                    </div>
+                    <p>Dedicated to providing the highest standard of orthopaedic and spine care in Mysore, ensuring our patients return to their lives as quickly and safely as possible.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/search/top?q=Jisha%20Prime%20Orthopaedic%20%26%20Spine%20Care" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/thespinemechanic07" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919187050960" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="https://www.bookmydoctorr.com/doctor-details/prajwal-narayan-144" target="_blank">Book Appointment</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#spine">Spine Surgery</a></li>
+                        <li><a href="services.html#joint">Joint Replacement</a></li>
+                        <li><a href="services.html#trauma">Trauma & Fracture Care</a></li>
+                        <li><a href="services.html#sports">Sports Medicine</a></li>
+                        <li><a href="services.html#physio">Physiotherapy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Punya Square, Sayyaji Rao Road,<br>Mysore, Karnataka 570001</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 91870 50960</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>jishaprimeorthocare@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Jisha Prime Orthopaedic & Spine Care. All Rights Reserved. Designed for Excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
