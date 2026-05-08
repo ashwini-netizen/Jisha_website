@@ -1,230 +1,548 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book an Appointment | Jisha Prime Orthopaedic & Spine Care</title>
+    <meta name="description"
+        content="Schedule your consultation with Dr. Prajwal Narayan. Expert orthopaedic and spine care in Mysore. Book your slot online.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=2">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/logo.png">
     <style>
-        .appointment-wrapper {
-            padding: 5rem 0;
-            background: linear-gradient(rgba(248, 249, 2FA, 0.9), rgba(248, 249, 2FA, 0.9)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+        :root {
+            --glass: rgba(255, 255, 255, 0.97);
+            --glass-border: rgba(255, 255, 255, 0.2);
         }
 
-        .appointment-container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--white);
-            border-radius: 20px;
-            box-shadow: var(--shadow-lg);
+        body {
+            background-color: #f0f4f8;
+        }
+
+        /* ── Header Banner ── */
+        .header-banner {
+            position: relative;
+            padding: 10rem 0 7rem;
+            text-align: center;
+            color: white;
             overflow: hidden;
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
+            background: linear-gradient(135deg, #001f4d 0%, #004AAD 60%, #0069d9 100%);
         }
 
-        .appointment-info {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 3rem;
+        .header-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            opacity: 0.6;
+            pointer-events: none;
         }
 
-        .appointment-info h2 {
-            color: var(--white);
+        .header-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0, 31, 77, 0.9) 0%, rgba(0, 74, 173, 0.8) 60%, rgba(0, 105, 217, 0.7) 100%);
+            z-index: 1;
+        }
+
+        .header-banner .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-banner h1 {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            color: white;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+            position: relative;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .breadcrumb {
+            font-size: 1rem;
+            font-weight: 500;
+            position: relative;
+            text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+        }
+
+        .breadcrumb a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            opacity: 0.85;
+            margin: 0 0.4rem;
+        }
+
+        /* ── Form Section ── */
+        .appointment-section {
+            padding: 5rem 0;
+        }
+
+        .contact-form-container {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            padding: clamp(2rem, 5vw, 4rem);
+            border-radius: 32px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+            border: 1px solid white;
+            max-width: 820px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+            margin-top: -3rem;
+        }
+
+        .form-badge {
+            display: inline-block;
+            background: rgba(0, 74, 173, 0.1);
+            color: #004AAD;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             margin-bottom: 1.5rem;
         }
 
-        .info-list {
-            margin-top: 2rem;
+        .contact-form-container h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: 0.8rem;
+            color: #1a1a2e;
         }
 
-        .info-item {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
+        .contact-form-container>p {
+            margin-bottom: 2.5rem;
+            color: #6b7280;
         }
 
-        .info-item i {
-            color: var(--primary-gold);
-            font-size: 1.2rem;
-            margin-top: 5px;
-        }
-
-        .appointment-form-box {
-            padding: 3rem;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-row {
+        .premium-form .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: var(--text-dark);
+        .premium-field {
+            position: relative;
+            margin-bottom: 2rem;
         }
 
-        input, select, textarea {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            font-family: inherit;
+        .premium-field .field-icon {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #004AAD;
             font-size: 1rem;
-            transition: border-color var(--transition-fast);
+            transition: color 0.3s ease;
+            z-index: 1;
         }
 
-        input:focus, select:focus, textarea:focus {
-            outline: none;
-            border-color: var(--secondary-blue);
+        .premium-field.has-textarea .field-icon,
+        .premium-field .textarea-icon {
+            top: 18px;
+            transform: none;
         }
 
-        .submit-btn {
+        .premium-field input,
+        .premium-field textarea,
+        .premium-field select {
             width: 100%;
-            padding: 1rem;
-            background-color: var(--accent-orange);
-            color: var(--white);
             border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: background var(--transition-normal);
+            border-bottom: 2px solid #e0e0e0;
+            padding: 0.8rem 0 0.8rem 2rem;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            background: transparent;
+            outline: none;
+            transition: border-color 0.3s ease;
+            color: #1a1a2e;
+            resize: none;
+            appearance: none;
         }
 
-        .submit-btn:hover {
-            background-color: #e5561a;
+        .premium-field input[type="date"] {
+            color: #1a1a2e;
+        }
+
+        .premium-field label {
+            position: absolute;
+            left: 2rem;
+            top: 0.8rem;
+            color: #888;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .premium-field input:focus~label,
+        .premium-field input:not(:placeholder-shown)~label,
+        .premium-field textarea:focus~label,
+        .premium-field textarea:not(:placeholder-shown)~label,
+        .premium-field select:focus~label,
+        .premium-field select:not([value=""])~label {
+            top: -1.2rem;
+            font-size: 0.82rem;
+            color: #004AAD;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 10px rgba(0, 74, 173, 0.1);
+        }
+
+        .premium-field select:not(:invalid)~label {
+             top: -1.2rem;
+            font-size: 0.82rem;
+            color: #004AAD;
+            font-weight: 700;
+        }
+
+        .premium-field .field-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #004AAD, #FFD700, #0096FF);
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 2px;
+        }
+
+        .premium-field input:focus~.field-line,
+        .premium-field textarea:focus~.field-line,
+        .premium-field select:focus~.field-line {
+            width: 100%;
+        }
+
+        .premium-field input:focus,
+        .premium-field textarea:focus,
+        .premium-field select:focus {
+            border-bottom-color: transparent;
+            background: rgba(0, 74, 173, 0.02);
+        }
+
+        .premium-field input[type="email"]:focus {
+            background: rgba(124, 58, 237, 0.02);
+        }
+
+        .send-btn {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #004AAD 0%, #0096FF 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 74, 173, 0.35);
+        }
+
+        .send-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 74, 173, 0.5);
+            background: linear-gradient(135deg, #003a8c 0%, #007acc 100%);
+        }
+
+        /* ── Success Modal ── */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s ease;
+        }
+
+        .modal-overlay.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .success-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 32px;
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+            transform: scale(0.8) translateY(30px);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modal-overlay.show .success-card {
+            transform: scale(1) translateY(0);
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: #25D366;
+            color: white;
+            font-size: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+            animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+
+        .success-card h2 {
+            color: #1a1a2e;
+            margin-bottom: 0.5rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .success-card p {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .close-modal-btn {
+            background: #004AAD;
+            color: white;
+            border: none;
+            padding: 0.8rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .close-modal-btn:hover {
+            background: #003a8c;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 74, 173, 0.3);
+        }
+
+        .confirm-container {
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            color: #4b5563;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            cursor: pointer;
+        }
+
+        .confirm-container input[type="checkbox"] {
+            width: 22px;
+            height: 22px;
+            border: 2px solid #d1d5db;
+            border-radius: 6px;
+            cursor: pointer;
+            flex-shrink: 0;
+            accent-color: #00a859;
+        }
+
+        .btn-confirm {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+            padding: 1.1rem 2.8rem;
+            border-radius: 50px;
+            border: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 25px rgba(0, 74, 173, 0.25);
+        }
+
+        .btn-confirm:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 150, 255, 0.3);
+            filter: brightness(1.05);
+        }
+
+        .btn-confirm i {
+            font-size: 1rem;
+        }
+
+        /* Logo Branding Sync */
+        .logo-text h1 {
+            color: #004AAD !important; /* Original Blue */
+        }
+
+        .logo-text p {
+            color: #FF5F1F !important; /* Original Orange */
         }
 
         @media (max-width: 768px) {
-            .appointment-container {
+            .premium-form .form-row {
                 grid-template-columns: 1fr;
+                gap: 0;
             }
-            .form-row {
-                grid-template-columns: 1fr;
+            .btn-confirm {
+                width: 100%;
+                justify-content: center;
             }
         }
     </style>
 </head>
-<body>
 
-        
-    </div>
+<body>
 
     <!-- Main Navigation -->
     <header class="header">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                                                                                                                                <!-- Original Logo Image -->
-                <img src="assets/logo.png" alt="Jisha Prime Orthopaedic & Spine Care Logo" style="height: 70px; width: auto;">
+                <img src="assets/logo.png" alt="Logo" style="height: 70px; width: auto;">
                 <div class="logo-text">
                     <h1>Jisha Prime</h1>
                     <p>Orthopaedic & Spine Care</p>
                 </div>
             </a>
-            
             <div class="mobile-toggle">
                 <i class="fas fa-bars"></i>
             </div>
-
             <nav class="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About Us</a>
                 <a href="services.html" class="nav-link">Services</a>
                 <a href="contact.html" class="nav-link">Contact</a>
-                <a href="contact.html" class="btn btn-secondary" style="color: white; border: none;">Book Appointment</a>
+                <a href="appointment.html" class="btn btn-secondary" style="color: white; border: none;">Book
+                    Appointment</a>
             </nav>
         </div>
     </header>
 
-    <section class="appointment-wrapper">
+    <!-- Page Header -->
+    <div class="header-banner">
+        <video autoplay muted loop playsinline class="header-video" poster="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-surgeons-performing-a-surgery-41133-large.mp4"
+                type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="header-overlay"></div>
         <div class="container">
-            <div class="appointment-container">
-                <div class="appointment-info">
-                    <h2>Book Your Consultation</h2>
-                    <p>Fill out the form to request an appointment. Our team will get back to you within 24 hours to confirm your slot.</p>
-                    
-                    <div class="info-list">
-                        <div class="info-item">
-                            <i class="fas fa-calendar-check"></i>
-                            <div>
-                                <h3>Quick Booking</h3>
-                                <p>Easy and fast scheduling for your convenience.</p>
-                            </div>
+            <h1>Book Appointment</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Appointment</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Appointment Form Section -->
+    <section class="appointment-section">
+        <div class="container">
+            <div class="contact-form-container">
+                <span class="form-badge">Schedule Consultation</span>
+                <h2>Book Your Appointment</h2>
+                <p>Fill out the form below and our medical team will get back to you within 24 hours to confirm your slot.</p>
+
+                <form id="appointmentForm" action="#" method="POST" class="premium-form" novalidate>
+                    <div class="form-row">
+                        <div class="premium-field">
+                            <span class="field-icon"><i class="fas fa-user"></i></span>
+                            <input type="text" id="fullName" name="fullName" required placeholder=" ">
+                            <label for="fullName">Full Name *</label>
+                            <div class="field-line"></div>
                         </div>
-                        <div class="info-item">
-                            <i class="fas fa-user-shield"></i>
-                            <div>
-                                <h3>Safe & Secure</h3>
-                                <p>Your medical data is protected and confidential.</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-headset"></i>
-                            <div>
-                                <h3>Support</h3>
-                                <p>Call us directly if you have any urgent queries.</p>
-                            </div>
+                        <div class="premium-field">
+                            <span class="field-icon"><i class="fas fa-phone"></i></span>
+                            <input type="tel" id="phone" name="phone" required placeholder=" ">
+                            <label for="phone">Phone Number *</label>
+                            <div class="field-line"></div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="appointment-form-box">
-                    <form action="#" method="POST" id="appointmentForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="fullName">Full Name *</label>
-                                <input type="text" id="fullName" name="fullName" required placeholder="John Doe">
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number *</label>
-                                <input type="tel" id="phone" name="phone" required placeholder="+91 00000 00000">
-                            </div>
+
+                    <div class="form-row">
+                        <div class="premium-field">
+                            <span class="field-icon"><i class="fas fa-envelope"></i></span>
+                            <input type="email" id="email" name="email" placeholder=" ">
+                            <label for="email">Email Address (optional)</label>
+                            <div class="field-line"></div>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="john@example.com">
+                        <div class="premium-field">
+                            <span class="field-icon"><i class="fas fa-calendar-day"></i></span>
+                            <input type="date" id="date" name="date" required placeholder=" ">
+                            <label for="date">Preferred Date *</label>
+                            <div class="field-line"></div>
                         </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="service">Select Service *</label>
-                                <select id="service" name="service" required>
-                                    <option value="">Choose a service...</option>
-                                    <option value="spine">Spine Surgery</option>
-                                    <option value="joint">Joint Replacement</option>
-                                    <option value="trauma">Trauma & Fracture</option>
-                                    <option value="sports">Sports Injury</option>
-                                    <option value="general">General Consultation</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="date">Preferred Date *</label>
-                                <input type="date" id="date" name="date" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Brief Reason for Visit</label>
-                            <textarea id="message" name="message" rows="4" placeholder="How can we help you?"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">Schedule Appointment</button>
-                    </form>
-                </div>
+                    </div>
+
+                    <div class="premium-field">
+                        <span class="field-icon"><i class="fas fa-stethoscope"></i></span>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected hidden></option>
+                            <option value="spine">Spine Surgery</option>
+                            <option value="joint">Joint Replacement</option>
+                            <option value="trauma">Trauma & Fracture</option>
+                            <option value="sports">Sports Injury</option>
+                            <option value="general">General Consultation</option>
+                        </select>
+                        <label for="service">Select Service *</label>
+                        <div class="field-line"></div>
+                        <i class="fas fa-chevron-down" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); color: #004AAD; font-size: 0.8rem; pointer-events: none;"></i>
+                    </div>
+
+                    <div class="premium-field">
+                        <span class="field-icon textarea-icon"><i class="fas fa-comment-medical"></i></span>
+                        <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                        <label for="message">Brief Reason for Visit *</label>
+                        <div class="field-line"></div>
+                    </div>
+
+                    <!-- Confirmation Checkbox -->
+                    <label class="confirm-container">
+                        <input type="checkbox" id="confirmData" required>
+                        <span>I confirm that the information provided is accurate and I consent to data processing for appointment scheduling.</span>
+                    </label>
+
+                    <button type="submit" class="btn-confirm" id="submitBtn">
+                        <span>Confirm Appointment</span>
+                        <i class="fas fa-check"></i>
+                    </button>
+                </form>
             </div>
         </div>
     </section>
@@ -234,29 +552,35 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <div class="logo-text" style="margin-bottom: 1rem;">
-                        <h1 style="color: var(--white);">Jisha Prime</h1>
-                        <p style="color: var(--primary-gold);">Orthopaedic & Spine Care</p>
+                    <div class="logo-text" style="margin-bottom: 1.5rem;">
+                        <h2 style="color: var(--white); font-size: 2rem;">Jisha Prime</h2>
+                        <p style="color: var(--primary-gold); letter-spacing: 2px;">ORTHOPAEDIC &amp; SPINE CARE</p>
                     </div>
-                    <p>Dedicated to providing the highest standard of orthopaedic and spine care in Mysore, ensuring our patients return to their lives as quickly and safely as possible.</p>
+                    <p>Dedicated to providing the highest standard of orthopaedic and spine care in Mysore, ensuring our
+                        patients return to their lives as quickly and safely as possible.</p>
                     <div class="footer-social">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/919876543210" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/search/top?q=Jisha%20Prime%20Orthopaedic%20%26%20Spine%20Care"
+                            target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/thespinemechanic07" target="_blank" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919187050960" target="_blank" aria-label="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-col">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Our Services</a></li>
-                        <li><a href="contact.html">Book Appointment</a></li>
+                        <li><a href="appointment.html">Book Appointment</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col">
                     <h3>Our Services</h3>
                     <ul class="footer-links">
@@ -267,25 +591,33 @@
                         <li><a href="services.html#physio">Physiotherapy</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col">
                     <h3>Contact Info</h3>
                     <ul class="footer-contact">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>123 Medical Hub Road, Kuvempunagar,<br>Mysore, Karnataka 570023</span>
+                            <a href="https://maps.app.goo.gl/DzccedRnH6jNJnV17" target="_blank"
+                                style="color: inherit; transition: color 0.3s ease;"
+                                onmouseover="this.style.color='var(--primary-gold)'"
+                                onmouseout="this.style.color='inherit'">
+                                <span>Punya Square, Sayyaji Rao Road, Devaraja Mohalla, Mysuru, Karnataka 570001,
+                                    India</span>
+                            </a>
                         </li>
                         <li>
+                            <i class="fas fa-phone-alt"></i>
                             <span>+91 91870 50960</span>
                         </li>
                         <li>
                             <i class="fas fa-envelope"></i>
-                            <span>info@jishaprime.com</span>
+                            <span>jishaprimeorthocare@gmail.com</span>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
+
         <div class="footer-bottom">
             <div class="container">
                 <p>&copy; 2026 Jisha Prime Orthopaedic & Spine Care. All Rights Reserved. Designed for Excellence.</p>
@@ -293,6 +625,52 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="success-card">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h2>Appointment Requested!</h2>
+            <p>Thank you for booking with us. Our team will review your request and contact you shortly to confirm your preferred slot.</p>
+            <button class="close-modal-btn" id="closeModalBtn">Got it, thanks!</button>
+        </div>
+    </div>
+
+    <script src="js/main.js?v=2"></script>
+    <script>
+        const form = document.getElementById('appointmentForm');
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Check if checkbox is checked
+                const confirmCheckbox = document.getElementById('confirmData');
+                if (!confirmCheckbox.checked) {
+                    alert('Please confirm the information and consent to data processing.');
+                    return;
+                }
+
+                const btn = document.getElementById('submitBtn');
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+                btn.disabled = true;
+
+                setTimeout(() => {
+                    btn.innerHTML = '<span>Confirm Appointment</span><i class="fas fa-check"></i>';
+                    btn.disabled = false;
+                    form.reset();
+
+                    const successModal = document.getElementById('successModal');
+                    const closeModalBtn = document.getElementById('closeModalBtn');
+
+                    successModal.classList.add('show');
+
+                    closeModalBtn.onclick = () => successModal.classList.remove('show');
+                    successModal.onclick = (e) => { if (e.target === successModal) successModal.classList.remove('show'); };
+                }, 1500);
+            });
+        }
+    </script>
 </body>
+
 </html>

@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Jisha Prime Orthopaedic & Spine Care</title>
-    <meta name="description" content="Contact Jisha Prime Orthopaedic & Spine Care in Mysore. Call +91 91870 50960, email us, or visit Punya Square, Sayyaji Rao Road, Mysore.">
+    <meta name="description"
+        content="Contact Jisha Prime Orthopaedic & Spine Care in Mysore. Call +91 91870 50960, email us, or visit Punya Square, Sayyaji Rao Road, Devaraja Mohalla, Mysuru.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=2">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/logo.png">
     <style>
@@ -18,7 +22,9 @@
             --glass-border: rgba(255, 255, 255, 0.2);
         }
 
-        body { background-color: #f0f4f8; }
+        body {
+            background-color: #f0f4f8;
+        }
 
         /* ── Header Banner ── */
         .header-banner {
@@ -29,12 +35,14 @@
             position: relative;
             overflow: hidden;
         }
+
         .header-banner::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse at 70% 50%, rgba(255,215,0,0.08) 0%, transparent 60%);
+            background: radial-gradient(ellipse at 70% 50%, rgba(255, 215, 0, 0.08) 0%, transparent 60%);
         }
+
         .header-banner h1 {
             font-size: clamp(2.2rem, 5vw, 3.5rem);
             color: white;
@@ -43,12 +51,27 @@
             letter-spacing: -1px;
             position: relative;
         }
-        .breadcrumb { font-size: 1rem; font-weight: 500; position: relative; }
-        .breadcrumb a { color: #FFD700; text-decoration: none; }
-        .breadcrumb span { opacity: 0.85; margin: 0 0.4rem; }
+
+        .breadcrumb {
+            font-size: 1rem;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .breadcrumb a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            opacity: 0.85;
+            margin: 0 0.4rem;
+        }
 
         /* ── Tab Navigation ── */
-        .tab-section { padding: 0 0 5rem; }
+        .tab-section {
+            padding: 0 0 5rem;
+        }
 
         .tab-nav-wrapper {
             display: flex;
@@ -87,8 +110,16 @@
             transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
             white-space: nowrap;
         }
-        .tab-btn i { font-size: 1rem; }
-        .tab-btn:hover { color: #004AAD; background: rgba(0, 74, 173, 0.07); }
+
+        .tab-btn i {
+            font-size: 1rem;
+        }
+
+        .tab-btn:hover {
+            color: #004AAD;
+            background: rgba(0, 74, 173, 0.07);
+        }
+
         .tab-btn.active {
             background: linear-gradient(135deg, #004AAD 0%, #0069d9 100%);
             color: white;
@@ -100,11 +131,21 @@
             display: none;
             animation: fadeSlideIn 0.45s ease forwards;
         }
-        .tab-pane.active { display: block; }
+
+        .tab-pane.active {
+            display: block;
+        }
 
         @keyframes fadeSlideIn {
-            from { opacity: 0; transform: translateY(16px); }
-            to   { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* ── Contact Info Grid ── */
@@ -125,25 +166,45 @@
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: 1px solid transparent;
         }
+
         .contact-card:hover {
             transform: translateY(-6px) scale(1.02);
             border-color: #FFD700;
             box-shadow: 0 20px 40px rgba(0, 74, 173, 0.12);
         }
+
         .contact-card .icon-box {
-            width: 64px; height: 64px;
+            width: 64px;
+            height: 64px;
             background: linear-gradient(135deg, #f0f6ff, #e6f0ff);
             border-radius: 18px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.5rem; color: #004AAD;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #004AAD;
             flex-shrink: 0;
             transition: all 0.35s ease;
         }
+
         .contact-card:hover .icon-box {
-            background: #004AAD; color: white; transform: rotate(-10deg);
+            background: #004AAD;
+            color: white;
+            transform: rotate(-10deg);
         }
-        .contact-card h3 { font-size: 1.15rem; margin-bottom: 0.3rem; color: #1a202c; }
-        .contact-card p { color: #6b7280; font-size: 0.93rem; line-height: 1.6; margin: 0; }
+
+        .contact-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.3rem;
+            color: #1a202c;
+        }
+
+        .contact-card p {
+            color: #6b7280;
+            font-size: 0.93rem;
+            line-height: 1.6;
+            margin: 0;
+        }
 
         /* Quick Actions Bar */
         .quick-actions {
@@ -152,35 +213,61 @@
             margin-top: 2.5rem;
             flex-wrap: wrap;
         }
+
         .quick-btn {
-            flex: 1; min-width: 140px;
-            display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+            flex: 1;
+            min-width: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
             padding: 1rem 1.5rem;
             border-radius: 16px;
             font-family: 'Outfit', sans-serif;
-            font-weight: 600; font-size: 0.95rem;
+            font-weight: 600;
+            font-size: 0.95rem;
             text-decoration: none;
             transition: all 0.3s ease;
         }
+
         .quick-btn.call {
             background: linear-gradient(135deg, #004AAD, #0069d9);
             color: white;
             box-shadow: 0 6px 20px rgba(0, 74, 173, 0.3);
         }
-        .quick-btn.call:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,74,173,0.4); }
+
+        .quick-btn.call:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 74, 173, 0.4);
+        }
+
         .quick-btn.whatsapp {
             background: linear-gradient(135deg, #25D366, #128C7E);
             color: white;
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
         }
-        .quick-btn.whatsapp:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(37,211,102,0.4); }
-        .quick-btn.email {
-            background: white;
-            color: #004AAD;
-            border: 2px solid #e5e7eb;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+
+        .quick-btn.whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.4);
         }
-        .quick-btn.email:hover { border-color: #004AAD; transform: translateY(-3px); }
+
+        .quick-btn.email {
+            background: linear-gradient(135deg, #7C3AED, #5B21B6);
+            color: white;
+            border: none;
+            box-shadow: 0 6px 20px rgba(124, 58, 237, 0.3);
+        }
+
+        .quick-btn.email:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(124, 58, 237, 0.4);
+            background: linear-gradient(135deg, #6D28D9, #4C1D95);
+        }
+
+        .premium-field input[type="email"]:focus {
+            background: rgba(124, 58, 237, 0.02);
+        }
 
         /* ── Contact Form ── */
         .contact-form-container {
@@ -193,6 +280,7 @@
             max-width: 820px;
             margin: 0 auto;
         }
+
         .form-badge {
             display: inline-block;
             background: rgba(0, 74, 173, 0.1);
@@ -205,8 +293,17 @@
             letter-spacing: 2px;
             margin-bottom: 1.5rem;
         }
-        .contact-form-container h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 0.8rem; color: #1a1a2e; }
-        .contact-form-container > p { margin-bottom: 2.5rem; color: #6b7280; }
+
+        .contact-form-container h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: 0.8rem;
+            color: #1a1a2e;
+        }
+
+        .contact-form-container>p {
+            margin-bottom: 2.5rem;
+            color: #6b7280;
+        }
 
         .premium-form .form-row {
             display: grid;
@@ -214,15 +311,28 @@
             gap: 2rem;
             margin-bottom: 2rem;
         }
-        .premium-field { position: relative; margin-bottom: 2rem; }
-        .premium-field .field-icon {
-            position: absolute; left: 0; top: 50%;
-            transform: translateY(-50%);
-            color: #004AAD; font-size: 1rem;
-            transition: color 0.3s ease; z-index: 1;
+
+        .premium-field {
+            position: relative;
+            margin-bottom: 2rem;
         }
+
+        .premium-field .field-icon {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #004AAD;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+            z-index: 1;
+        }
+
         .premium-field.has-textarea .field-icon,
-        .premium-field .textarea-icon { top: 18px; transform: none; }
+        .premium-field .textarea-icon {
+            top: 18px;
+            transform: none;
+        }
 
         .premium-field input,
         .premium-field textarea {
@@ -238,40 +348,71 @@
             color: #1a1a2e;
             resize: none;
         }
+
         .premium-field label {
-            position: absolute; left: 2rem; top: 0.8rem;
-            color: #888; font-size: 1rem;
+            position: absolute;
+            left: 2rem;
+            top: 0.8rem;
+            color: #888;
+            font-size: 1rem;
             transition: all 0.3s ease;
             pointer-events: none;
         }
-        .premium-field input:focus ~ label,
-        .premium-field input:not(:placeholder-shown) ~ label,
-        .premium-field textarea:focus ~ label,
-        .premium-field textarea:not(:placeholder-shown) ~ label {
-            top: -1rem; font-size: 0.78rem;
-            color: #004AAD; font-weight: 600; letter-spacing: 0.5px;
+
+        .premium-field input:focus~label,
+        .premium-field input:not(:placeholder-shown)~label,
+        .premium-field textarea:focus~label,
+        .premium-field textarea:not(:placeholder-shown)~label {
+            top: -1.2rem;
+            font-size: 0.82rem;
+            color: #004AAD;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 10px rgba(0, 74, 173, 0.1);
         }
+
         .premium-field .field-line {
-            position: absolute; bottom: 0; left: 0;
-            width: 0; height: 2px;
-            background: linear-gradient(90deg, #004AAD, #FFD700);
-            transition: width 0.4s ease;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #004AAD, #FFD700, #0096FF);
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 2px;
         }
-        .premium-field input:focus ~ .field-line,
-        .premium-field textarea:focus ~ .field-line { width: 100%; }
+
+        .premium-field input:focus~.field-line,
+        .premium-field textarea:focus~.field-line {
+            width: 100%;
+        }
+
         .premium-field input:focus,
-        .premium-field textarea:focus { border-bottom-color: transparent; }
+        .premium-field textarea:focus {
+            border-bottom-color: transparent;
+            background: rgba(0, 74, 173, 0.02);
+        }
 
         .send-btn {
-            width: 100%; padding: 1rem 2rem;
+            width: 100%;
+            padding: 1rem 2rem;
             background: linear-gradient(135deg, #004AAD 0%, #0096FF 100%);
-            color: white; border: none; border-radius: 50px;
-            font-size: 1.1rem; font-weight: 600;
-            font-family: 'Outfit', sans-serif; cursor: pointer;
-            display: flex; align-items: center; justify-content: center; gap: 0.75rem;
-            letter-spacing: 0.5px; transition: all 0.3s ease;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
             box-shadow: 0 8px 25px rgba(0, 74, 173, 0.35);
         }
+
         .send-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 12px 35px rgba(0, 74, 173, 0.5);
@@ -282,58 +423,190 @@
         .map-wrapper {
             border-radius: 32px;
             overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
             height: 520px;
             border: 6px solid white;
             position: relative;
         }
-        .map-wrapper iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
 
         .map-placeholder {
-            width: 100%; height: 100%;
-            display: flex; flex-direction: column;
-            align-items: center; justify-content: center;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             background: linear-gradient(135deg, #f0f6ff, #e6f0ff);
-            gap: 1rem; cursor: pointer;
+            gap: 1rem;
+            cursor: pointer;
             transition: background 0.3s ease;
         }
-        .map-placeholder:hover { background: linear-gradient(135deg, #e6f0ff, #d0e4ff); }
-        .map-placeholder i { font-size: 3.5rem; color: #004AAD; }
-        .map-placeholder p { font-size: 1.1rem; font-weight: 600; color: #004AAD; margin: 0; }
-        .map-placeholder small { color: #6b7280; font-size: 0.85rem; }
+
+        .map-placeholder:hover {
+            background: linear-gradient(135deg, #e6f0ff, #d0e4ff);
+        }
+
+        .map-placeholder i {
+            font-size: 3.5rem;
+            color: #004AAD;
+        }
+
+        .map-placeholder p {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #004AAD;
+            margin: 0;
+        }
+
+        .map-placeholder small {
+            color: #6b7280;
+            font-size: 0.85rem;
+        }
+
         .map-load-btn {
             padding: 0.8rem 2rem;
             background: linear-gradient(135deg, #004AAD, #0069d9);
-            color: white; border: none; border-radius: 50px;
-            font-family: 'Outfit', sans-serif; font-weight: 600;
-            font-size: 0.95rem; cursor: pointer;
-            box-shadow: 0 6px 20px rgba(0,74,173,0.3);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(0, 74, 173, 0.3);
             transition: all 0.3s ease;
         }
-        .map-load-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,74,173,0.4); }
 
-        /* ── Success Toast ── */
-        .toast {
-            position: fixed; bottom: 2rem; right: 2rem;
-            background: #1a202c; color: white;
-            padding: 1rem 1.5rem; border-radius: 16px;
-            display: flex; align-items: center; gap: 0.75rem;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            transform: translateY(100px); opacity: 0;
-            transition: all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);
-            z-index: 9999;
+        .map-load-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(0, 74, 173, 0.4);
         }
-        .toast.show { transform: translateY(0); opacity: 1; }
-        .toast i { color: #25D366; font-size: 1.3rem; }
+
+        /* ── Success Modal ── */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s ease;
+        }
+
+        .modal-overlay.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .success-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 32px;
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+            transform: scale(0.8) translateY(30px);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modal-overlay.show .success-card {
+            transform: scale(1) translateY(0);
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: #25D366;
+            color: white;
+            font-size: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+            animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .success-card h2 {
+            color: #1a1a2e;
+            margin-bottom: 0.5rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .success-card p {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .close-modal-btn {
+            background: #004AAD;
+            color: white;
+            border: none;
+            padding: 0.8rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .close-modal-btn:hover {
+            background: #003a8c;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 74, 173, 0.3);
+        }
 
         @media (max-width: 768px) {
-            .premium-form .form-row { grid-template-columns: 1fr; gap: 0; }
-            .tab-btn { padding: 0.65rem 1.2rem; font-size: 0.85rem; }
-            .quick-actions { flex-direction: column; }
-            .map-wrapper { height: 380px; }
+            .premium-form .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .tab-btn {
+                padding: 0.65rem 1.2rem;
+                font-size: 0.85rem;
+            }
+
+            .quick-actions {
+                flex-direction: column;
+            }
+
+            .map-wrapper {
+                height: 380px;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- Main Navigation -->
@@ -354,7 +627,8 @@
                 <a href="about.html" class="nav-link">About Us</a>
                 <a href="services.html" class="nav-link">Services</a>
                 <a href="contact.html" class="nav-link">Contact</a>
-                <a href="contact.html" class="btn btn-secondary" style="color: white; border: none;">Book Appointment</a>
+                <a href="appointment.html" class="btn btn-secondary" style="color: white; border: none;">Book
+                    Appointment</a>
             </nav>
         </div>
     </header>
@@ -397,7 +671,13 @@
                         <div class="icon-box"><i class="fas fa-location-dot"></i></div>
                         <div>
                             <h3>Visit Us</h3>
-                            <p>Punya Square, Sayyaji Rao Road,<br>Mysore – 570001</p>
+                            <a href="https://maps.app.goo.gl/DzccedRnH6jNJnV17" target="_blank"
+                                style="color: inherit; transition: color 0.3s ease;"
+                                onmouseover="this.style.color='var(--primary-gold)'"
+                                onmouseout="this.style.color='inherit'">
+                                <span>Punya Square, Sayyaji Rao Road, Devaraja Mohalla, Mysuru, Karnataka 570001,
+                                    India</span>
+                            </a>
                         </div>
                     </div>
                     <div class="contact-card">
@@ -411,14 +691,14 @@
                         <div class="icon-box"><i class="fas fa-envelope-open-text"></i></div>
                         <div>
                             <h3>Email Support</h3>
-                            <p>jishaprimeorthocare@gmail.com<br>info@jishaprime.com</p>
+                            <p>jishaprimeorthocare@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-card">
                         <div class="icon-box"><i class="fas fa-clock"></i></div>
                         <div>
                             <h3>Clinic Hours</h3>
-                            <p>Mon – Sat: 9:00 AM – 8:00 PM<br>Sunday: Emergency Only</p>
+                            <p>Mon – Sat: 9:00 AM – 8:00 PM | Sun: Emergency Only</p>
                         </div>
                     </div>
                 </div>
@@ -454,23 +734,18 @@
                             </div>
                             <div class="premium-field">
                                 <span class="field-icon"><i class="fas fa-envelope"></i></span>
-                                <input type="email" id="email" name="email" required placeholder=" ">
-                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder=" ">
+                                <label for="email">Email Address (optional)</label>
                                 <div class="field-line"></div>
                             </div>
                         </div>
                         <div class="premium-field">
                             <span class="field-icon"><i class="fas fa-phone"></i></span>
-                            <input type="tel" id="phone" name="phone" placeholder=" ">
-                            <label for="phone">Phone Number (optional)</label>
+                            <input type="tel" id="phone" name="phone" required placeholder=" ">
+                            <label for="phone">Phone Number</label>
                             <div class="field-line"></div>
                         </div>
-                        <div class="premium-field">
-                            <span class="field-icon"><i class="fas fa-tag"></i></span>
-                            <input type="text" id="subject" name="subject" required placeholder=" ">
-                            <label for="subject">Subject</label>
-                            <div class="field-line"></div>
-                        </div>
+
                         <div class="premium-field">
                             <span class="field-icon textarea-icon"><i class="fas fa-comment-dots"></i></span>
                             <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
@@ -490,7 +765,7 @@
                 <div class="map-wrapper" id="mapWrapper">
                     <div class="map-placeholder" id="mapPlaceholder">
                         <i class="fas fa-map-location-dot"></i>
-                        <p>Punya Square, Sayyaji Rao Road, Mysore</p>
+                        <p>Punya Square, Sayyaji Rao Road, Devaraja Mohalla, Mysuru, Karnataka 570001, India</p>
                         <small>Click to load the interactive map</small>
                         <button class="map-load-btn" id="loadMapBtn">
                             <i class="fas fa-map-pin"></i> Load Map
@@ -511,11 +786,17 @@
                         <h2 style="color: var(--white); font-size: 2rem;">Jisha Prime</h2>
                         <p style="color: var(--primary-gold); letter-spacing: 2px;">ORTHOPAEDIC &amp; SPINE CARE</p>
                     </div>
-                    <p>Dedicated to providing the highest standard of orthopaedic and spine care in Mysore, ensuring our patients return to their lives as quickly and safely as possible.</p>
+                    <p>Dedicated to providing the highest standard of orthopaedic and spine care in Mysore, ensuring our
+                        patients return to their lives as quickly and safely as possible.</p>
                     <div class="footer-social">
-                        <a href="https://www.facebook.com/search/top?q=Jisha%20Prime%20Orthopaedic%20%26%20Spine%20Care" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/thespinemechanic07" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/919187050960" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/search/top?q=Jisha%20Prime%20Orthopaedic%20%26%20Spine%20Care"
+                            target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/thespinemechanic07" target="_blank" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919187050960" target="_blank" aria-label="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -523,31 +804,62 @@
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact.html">Booking</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="appointment.html">Book Appointment</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
+
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#spine">Spine Surgery</a></li>
+                        <li><a href="services.html#joint">Joint Replacement</a></li>
+                        <li><a href="services.html#trauma">Trauma & Fracture Care</a></li>
+                        <li><a href="services.html#sports">Sports Medicine</a></li>
+                        <li><a href="services.html#physio">Physiotherapy</a></li>
+                    </ul>
+                </div>
+
                 <div class="footer-col">
                     <h3>Contact</h3>
                     <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <a href="https://maps.app.goo.gl/DzccedRnH6jNJnV17" target="_blank"
+                                style="color: inherit; transition: color 0.3s ease;"
+                                onmouseover="this.style.color='var(--primary-gold)'"
+                                onmouseout="this.style.color='inherit'">
+                                <span>Punya Square, Sayyaji Rao Road,<br>Devaraja Mohalla, Mysuru,<br>Karnataka 570001,
+                                    India</span>
+                            </a>
+                        </li>
                         <li><i class="fas fa-phone"></i> +91 91870 50960</li>
                         <li><i class="fas fa-envelope"></i> jishaprimeorthocare@gmail.com</li>
                     </ul>
                 </div>
             </div>
+
             <div class="footer-bottom">
                 <p>&copy; 2026 Jisha Prime. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Toast Notification -->
-    <div class="toast" id="toast">
-        <i class="fas fa-check-circle"></i>
-        <span>Message sent! We'll get back to you soon.</span>
+    <!-- Success Popup Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="success-card">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h2>Message Sent!</h2>
+            <p>Thank you for reaching out. Our medical team has received your message and will contact you within 24
+                hours.</p>
+            <button class="close-modal-btn" id="closeModalBtn">Got it, thanks!</button>
+        </div>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=2"></script>
     <script>
         // ── Tab Switching ──
         const tabBtns = document.querySelectorAll('.tab-btn');
@@ -557,7 +869,7 @@
             btn.addEventListener('click', () => {
                 const target = btn.dataset.tab;
 
-                tabBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+                tabBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
                 tabPanes.forEach(p => p.classList.remove('active'));
 
                 btn.classList.add('active');
@@ -573,7 +885,7 @@
 
         function loadMap() {
             const iframe = document.createElement('iframe');
-            iframe.src = "https://maps.google.com/maps?q=Dr%20Prajwal%20Narayan%20Mysore&t=&z=15&ie=UTF8&iwloc=&output=embed";
+            iframe.src = "https://maps.google.com/maps?q=Jisha%20Prime%20Orthopaedic%20and%20Spine%20Care%20Mysore&t=&z=16&ie=UTF8&iwloc=&output=embed";
             iframe.width = "100%";
             iframe.height = "100%";
             iframe.style.border = "0";
@@ -609,11 +921,18 @@
                     btn.innerHTML = '<span>Send Secure Message</span><i class="fas fa-paper-plane"></i>';
                     btn.disabled = false;
                     form.reset();
-                    toast.classList.add('show');
-                    setTimeout(() => toast.classList.remove('show'), 4000);
+
+                    const successModal = document.getElementById('successModal');
+                    const closeModalBtn = document.getElementById('closeModalBtn');
+
+                    successModal.classList.add('show');
+
+                    closeModalBtn.onclick = () => successModal.classList.remove('show');
+                    successModal.onclick = (e) => { if (e.target === successModal) successModal.classList.remove('show'); };
                 }, 1500);
             });
         }
     </script>
 </body>
+
 </html>
